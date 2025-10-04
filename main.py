@@ -1,13 +1,4 @@
-import string 
-import random
+stop_num = int(input("Please enter the number you want to end with: "))
 
-char_list =string.digits+string.ascii_letters +string.punctuation
-
-pass_len = 28
-
-pass_code = ""
-
-while len(pin_code)< pin_len:
-  pin_code+=random.choice(char_list)
-
-print(f"Your Pin Code Is: {pin_code}")
+for number in range(1, stop_num + 1):
+  print(number)
