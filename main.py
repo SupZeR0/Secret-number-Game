@@ -1,12 +1,34 @@
-stop_num = int(input("Please enter the number you want to end with: "))
-even_odd = int(input("if you want only even number type 2 if you wand odd type 3 "))
-for number in range(1,stop_num + 1):
-  print(number)
-  if even_odd == 2:
-    for number in range(0,stop_num,2):
-      print(f"the even numbers is:{number} ")
-  if even_odd  == 3:
-      for number in range(1,stop_num,2):
-        print(f"the odd numbers is: {number} ")
-  if number == stop_num:
-    break
+ students = {
+ "Mohamed": {
+ "grades": {
+ "math": 100,
+"english": 90,
+ "science": 80,
+ "arabic": 100
+ },
+ "age": 20
+ },
+ "Ahmed": {
+ "grades": {
+ "math": 100,
+ "english": 95,
+ "science": 93,
+ "arabic": 100
+ },
+ "age": 21
+ },
+ "Ali": {
+ "grades": {
+ "math": 85,
+ "english": 83,
+ "science": 87,
+ "arabic": 100
+ },
+ "age": 19
+ }
+ }
+
+mohamed_grades_value = students["Mohamed"]["grades"].values()
+sum_mohamed = sum(mohamed_grades_value)
+print(sum_mohamed)
+print( f"the Average grades for mohamed is: {sum(mohamed_grades_value) / len(mohamed_grades_value)} ")
