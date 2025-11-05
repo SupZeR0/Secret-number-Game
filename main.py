@@ -7,14 +7,17 @@ def read_csv_file(file_name):
   return data_lst
   
 def double_salary(emps_lst):
-  updated_list = []
   for employee in emps_lst:
-    emp_data = employee[0].split(' - ')
-    emp_data[-1] = str(float(emp_data[-1]) * 2)
-    updated_list.append(' - '.join(emp_data))
-  return updated_list
+    salary = employee[-1].replace(',', '').replace('"', '')
+    employee[-1] = str(float(salary) * 2)
+  return emps_lst
 
 emps_lst = read_csv_file('employees_data.csv')
+update_salary = double_salary(emps_lst)
 
-update_salary =double_salary(emps_lst)
-print(update_salary)
+def get_salary(employee):
+  return float(employee[-1])
+  
+sorted_emps_data = sorted(update_salary,key=get_salary)
+
+print(sorted_emps_data)
