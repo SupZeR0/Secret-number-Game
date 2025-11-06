@@ -18,6 +18,6 @@ update_salary = double_salary(emps_lst)
 def get_salary(employee):
   return float(employee[-1])
   
-sorted_emps_data = sorted(update_salary,key=get_salary)
+sorted_emps_data = sorted(update_salary, key=get_salary)
 
 print(sorted_emps_data)
