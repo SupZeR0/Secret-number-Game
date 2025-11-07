@@ -1,8 +1,9 @@
 import re
 
 with open('job_apllications_emails.txt', 'r') as f:
-    job_apllications_emails = f.read()
+    job_applications_emails = f.read()
 
-x = re.findall("Name", job_apllications_emails)
+name_Pattern = r"Name:(.+)"
+name_match = re.findall(name_Pattern, job_applications_emails)
 
-print(x)
+print(name_match)
