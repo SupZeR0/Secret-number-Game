@@ -12,5 +12,7 @@ email_pattern = r"[\w\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z]+"
 email_match = re.findall(email_pattern,job_applications_emails)
 print("email")
 for email in email_match:
-  if email:
-    print(email)
+  print(email)
+
+if email:
+  break
