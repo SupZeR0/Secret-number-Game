@@ -10,7 +10,6 @@ for name in name_match:
 
 email_pattern = r"Email:(\S+)"
 email_match = re.findall(email_pattern,job_applications_emails)
-print("email")
-for email in email_match:
-  print(email)
+email = email_match[0]
+
 
