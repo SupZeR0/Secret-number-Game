@@ -1,15 +1,14 @@
-import re
-with open('job_apllications_emails.txt', 'r') as f:
-    job_applications_emails = f.read()
 
-name_Pattern = r"Name:(.+)"
-name_match = re.findall(name_Pattern,job_applications_emails)
-print("name")
-for name in name_match:
-  print(name)
-
-email_pattern = r"Email:(\S+)"
-email_match = re.findall(email_pattern,job_applications_emails)
-email = email_match[0]
-
-
+class Hamada():
+  def __init__(self,name,age,last_name,phone_number):
+   self.name = 'Hamada'  
+   self.age = 25
+   self.last_name = 'Hamada'
+def stupid():
+  print('Hamada is not stupid')
+# make an instance of the class Hamada
+hamada = Hamada(Hamada,25,Hamada,phone_number)
+# add an attribute to the instance hamda
+phone_number = '0123456789'
+# print the attribute phonenumber of the instan
+print(hamada.phone_number)
